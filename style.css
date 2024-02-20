@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #ffd1dd,
+    #f18a85,
+    #8f4effc9,
+    #a9b0b4
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calc-container {
+  display: grid;
+  grid-template-columns: repeat(4, 4rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 4rem);
+  justify-content: center;
+  align-content: center;
+  background-color: #c5cacd;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.display {
+  grid-column: 1 / -1;
+  word-wrap: break-word;
+  word-break: break-all;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 0.75rem;
+  border-radius: 2rem;
+}
+
+.display .previous-value {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.display .current-value {
+  font-size: 2.5rem;
+}
+
+.long {
+  grid-column: span 2;
+}
+
+.long-row {
+  height: 8rem;
+  font-weight: bold;
+}
+
+button {
+  font-size: 1.5rem;
+  background: white;
+  border: 1px solid black;
+  border-radius: 2rem;
+  margin: 5px;
+}
+
+button:hover {
+  background: black;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
